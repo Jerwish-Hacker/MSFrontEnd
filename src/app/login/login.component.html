@@ -1,0 +1,30 @@
+<div class="container">
+   <div class="row" style="margin-top: 15vh;">
+    <div class="col-5 shadow-lg m-auto rounded-3" >
+        <div >
+            <form >
+                <h1 class="text-center my-3">Login Page</h1>
+                <hr>
+                <div class="mb-3">
+                    <label for="email" class="form-label">User Name</label>
+                    <input type="email" class="form-control" id="email" placeholder="User Name" >
+                    <span class="text-danger d-none {{ dynamicClass }}">No User Found</span>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                
+            </form>
+            <div class="text-center">
+                <button class="btn btn-dark mt-3 px-5 mb-5" (click)="this.login()">Login</button>
+            </div>
+        </div>
+    </div>
+   </div>
+</div>
+<div style="position: fixed;bottom: 0;right: 2%;">
+    
+   <img src="/assets/icon.png" alt=""  id="spray-clip">
+   <p class="fs-4">Please Login First !!!</p>
+</div>

@@ -1,0 +1,12 @@
+#spray-clip{
+    width: 200px;
+    animation: 1s infinite alternate spray-clip-move;
+}
+@keyframes spray-clip-move{
+    to{        
+        transform: rotate(20deg);
+    }
+}
+.display-show{
+    display: block !important;
+}
