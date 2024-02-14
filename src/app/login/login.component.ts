@@ -9,16 +9,32 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   constructor(private appService: AppserviceService,private router: Router) {}
-  dynamicClass: string = 'Hello, world!';
-  login() {    
-    let data="successs";
-    if (data=="success"){
-      this.router.navigate(['/home']  );
-    }
-    else{
-      this.dynamicClass="display-show";
-    }
+  dynamicClassforuser: string = '';  
+  dynamicClassforpassword: string = '';  
+  message: string ='';
 
+  login(username:string,password:string) {        
+    this.appService.login(username,password).subscribe((data: any) => {  
+      this.message = data.message;    
+      console.log(username,password);
+      console.log(this.message);
+
+      if (this.message == "Success"){
+        this.router.navigate(['/home']  );
+      }
+      else if(this.message=="No User Found"){
+        this.dynamicClassforuser="display-show";
+      }
+      else if(this.message=="Wrong Password"){
+        this.dynamicClassforpassword="display-show";
+      }
+     
+    })      
+   
+  }
+  resetError() {
+    this.dynamicClassforuser=" ";
+    this.dynamicClassforpassword=" ";   
   }
 
 }

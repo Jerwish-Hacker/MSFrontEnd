@@ -1,0 +1,93 @@
+
+<div class="container" style="overflow-x: hidden;min-width: 95% !important;">
+    <div class="row">
+        <div class="col-12 my-3 ">
+            <h3 class="fs-1">Purchase</h3>
+
+        </div>
+        <div class="col-12 my-3">
+            <div class="d-flex justify-content-evenly">
+                <div>
+                    <label for="" class="d-block">Product Name</label>                
+                    <input type="text"  [(ngModel)]="p_nameValue"  #p_name>
+                </div>                
+                <div>
+                    <label for="" class="d-block">Sub Name</label>                
+                    <input type="text" name="" [(ngModel)]="p_sub_nameValue"  #p_sub_name>
+                </div>
+                <div>
+                    <label for="" class="d-block">PPP</label>                
+                    <input type="text" name="" [(ngModel)]="pppValue"  #ppp>
+                </div>
+                <div>
+                    <label for="" class="d-block">Quantity</label>                
+                    <input type="text" name="" [(ngModel)]="quantityValue"  #quantity>
+                </div>
+                <div>
+                    <label for="" class="d-block">MRP</label>                
+                    <input type="text" name="" [(ngModel)]="mrpValue"  #mrp>
+                    
+                </div>
+                
+            </div>   
+            <div class="d-flex justify-content-end my-4 fs-3">                
+                <label for="" class="d-block">0.00 <b>RS</b></label>                                
+            </div>    
+            <div class="d-flex justify-content-end mt-4">
+                <button class="btn btn-dark px-5" (click)="addentry()">Add</button>
+            </div>     
+        </div>
+        <hr>
+        <div class="col-12 my-3">
+            <div class="d-flex justify-content-start ">
+                <select name="" id="" >
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option value="">Rahul</option>
+                    <option value="">Steve</option>
+                    <option value="">Rajesh</option>
+                    <option value="">Raju</option>    
+                </select>   
+                <button class="btn btn-dark mx-3 px-5">Submit</button>
+            </div>      
+            <div>
+            </div>
+        </div>
+        <div class="col-12 my-3">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Sub Name</th>
+                    <th scope="col">PPP</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">MRP</th>
+                  </tr>
+                </thead>
+                <tbody #tbody>
+                    <!-- <tr>
+                        <td>
+                            {{p_nameValue}}
+                        </td>
+                        <td>
+                            {{p_sub_nameValue}}
+                        </td>
+                        <td>
+                            {{pppValue}}
+                        </td>
+                        <td>
+                            {{quantityValue}}
+                        </td>
+                        <td>
+                            {{mrpValue}}
+                        </td>    
+                        <td>
+
+                        </td>                   
+                    </tr> -->
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

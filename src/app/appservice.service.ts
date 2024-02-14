@@ -9,12 +9,11 @@ export class AppserviceService {
 
   constructor(private http: HttpClient) { }
 
-  // login(): Observable<String> {
-  //   let auth = {
-  //     "userName": "Justin",
-  //     "password": "admin"
-  //   }
-  //   // return this.http.post<String>('http://localhost:8080/api/v1/users/login', auth);
-  //   return this.http.get<any>('https://dummyjson.com/products');
-  // } 
+   login(username:string,password:string): Observable<any> {
+     let auth = {
+       "userName": username,
+       "password": password
+     }
+  return this.http.post<any>('http://localhost:8080/api/v1/users/login', auth);
+  } 
 }

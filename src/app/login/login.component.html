@@ -6,18 +6,19 @@
                 <h1 class="text-center my-3">Login Page</h1>
                 <hr>
                 <div class="mb-3">
-                    <label for="email" class="form-label">User Name</label>
-                    <input type="email" class="form-control" id="email" placeholder="User Name" >
-                    <span class="text-danger d-none {{ dynamicClass }}">No User Found</span>
-                </div>
+                    <label for="text" class="form-label">User Name</label>
+                    <input type="text" class="form-control" id="username" placeholder="User Name" #username (click)="resetError()">
+                    <span class="text-danger d-none {{ dynamicClassforuser }}">No User Found</span>
+                </div>                
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <input type="password" class="form-control" id="password" placeholder="Password" #password (click)="resetError()">
+                    <span class="text-danger d-none {{ dynamicClassforpassword }}">Wrong Password</span>
                 </div>
                 
             </form>
             <div class="text-center">
-                <button class="btn btn-dark mt-3 px-5 mb-5" (click)="this.login()">Login</button>
+                <button class="btn btn-dark mt-3 px-5 mb-5" (click)="this.login(username.value,password.value)">Login</button>
             </div>
         </div>
     </div>
