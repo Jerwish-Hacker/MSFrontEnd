@@ -5,6 +5,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { VendorComponent } from './vendor/vendor.component';
 import { PurchaseComponent } from './purchase/purchase.component';
+import { StockComponent } from './stock/stock.component';
 
 const routes: Routes = [ 
   { path: '', component: LoginComponent },
@@ -17,6 +18,9 @@ const routes: Routes = [
     },    
     {
       path:'vendor', component: VendorComponent
+    },
+    {
+      path:'stock', component: StockComponent
     },
     {
       path:'purchase', component: PurchaseComponent

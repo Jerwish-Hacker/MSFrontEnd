@@ -1,0 +1,51 @@
+<div class="container" style="overflow-x: hidden;min-width: 95% !important;">
+    <div class="row">
+        <div class="col-12 my-3 ">
+            <h3 class="fs-1">Sales</h3>
+
+        </div>
+        <div class="col-3 my-3">
+            <div>
+                <label for="" class="d-block">Product Name</label>
+                <select name="p_name" #p_name class="mx-3" #pname (change)="getsubname(p_name.value)">
+                    <option value="" selected disabled hidden>Choose here</option>
+                 </select>            
+            </div>
+
+            <div class="mt-5">
+                <label for="" class="d-block">Sub Product Name</label>
+                <select name=""  class="mx-3" #psubname (change)="getquantity(p_name.value,psubname.value)">                     
+                    <option value="" selected disabled hidden>Choose here</option>
+                </select>                                
+            </div>
+        </div>
+
+        <div class="col-3 my-3">
+            <div>
+                <label for="" class="d-block">Quantity</label>
+                <input type="text"  >                
+                
+            </div>  
+            <div class="mt-5">
+                <label for="" class="d-block">PPP</label>
+                <input type="text"  >                
+            </div>          
+        </div>
+
+        <div class="col-3 my-3">
+            <div>
+                <label for="" class="d-block">MRP</label>
+                <input type="text"  >                
+            </div>  
+            <div class="mt-5">
+                <button class="btn btn-dark m-3 px-5">Add</button>
+            </div> 
+        </div>
+        
+        <div class="col-3 my-3">
+            <p #stockLabel class="fs-1"></p>
+                    
+        </div>
+    </div>
+    <hr>
+</div>
