@@ -41,8 +41,7 @@ export class StockComponent {
      })
   }
 
-  getquantity(p_name: any,p_sub_name:any){   
-    console.log("scdfsa")     ;
+  getquantity(p_name: any,p_sub_name:any){       
     this.appService.salesFetchQuantity(p_name,p_sub_name).subscribe((data: any) => { 
       this.stockLabel.nativeElement.innerHTML=parseInt(data) + " - Stock"
      })
