@@ -7,45 +7,66 @@
         <div class="col-3 my-3">
             <div>
                 <label for="" class="d-block">Product Name</label>
-                <select name="p_name" #p_name class="mx-3" #pname (change)="getsubname(p_name.value)">
+                <select name="p_name" #p_name class="mx-3" #pname (change)="getsubname(p_name.value)"
+                    [(ngModel)]="p_nameValue">
                     <option value="" selected disabled hidden>Choose here</option>
-                 </select>            
+                </select>
             </div>
-
             <div class="mt-5">
                 <label for="" class="d-block">Sub Product Name</label>
-                <select name=""  class="mx-3" #psubname (change)="getquantity(p_name.value,psubname.value)">                     
+                <select name="" class="mx-3" #psubname (change)="getquantity(p_name.value,psubname.value)"
+                    [(ngModel)]="p_sub_nameValue">
                     <option value="" selected disabled hidden>Choose here</option>
-                </select>                                
+                </select>
             </div>
         </div>
-
         <div class="col-3 my-3">
             <div>
                 <label for="" class="d-block">Quantity</label>
-                <input type="text"  >                
-                
-            </div>  
+                <input type="text" [(ngModel)]="quantityValue">
+            </div>
             <div class="mt-5">
                 <label for="" class="d-block">PPP</label>
-                <input type="text"  >                
-            </div>          
+                <input type="text" [(ngModel)]="pppValue">
+            </div>
         </div>
-
         <div class="col-3 my-3">
             <div>
                 <label for="" class="d-block">MRP</label>
-                <input type="text"  >                
-            </div>  
+                <input type="text" [(ngModel)]="mrpValue">
+            </div>
             <div class="mt-5">
-                <button class="btn btn-dark m-3 px-5">Add</button>
-            </div> 
+                <button class="btn btn-dark m-3 px-5" (click)="addsales()">Add</button>
+            </div>
         </div>
-        
-        <div class="col-3 my-3">
-            <p #stockLabel class="fs-1"></p>
-                    
+        <div class="col-3 my-3 border d-flex justify-content-center align-items-center">
+            <p #stockLabel class="display-4 text-success"></p>
+
         </div>
     </div>
     <hr>
+    <div class="row">
+        <div class="d-flex justify-content-start my-3">            
+            <button class="btn btn-dark mx-3 px-5">Submit</button>
+        </div>                        
+        <div class="col-12 my-3">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Sub Name</th>
+                        <th scope="col">PPP</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">MRP</th>
+                    </tr>
+                </thead>
+                <tbody #tbody>
+
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
 </div>

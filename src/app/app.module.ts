@@ -10,7 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { VendorComponent } from './vendor/vendor.component';
 import { PurchaseComponent } from './purchase/purchase.component';
 import { FormsModule } from '@angular/forms';
-import { StockComponent } from './stock/stock.component'; // Import FormsModule if using ngModel
+import { StockComponent } from './stock/stock.component';
+import { CreatevendorComponent } from './vendor/createvendor/createvendor.component';
+import { VendordetailComponent } from './vendor/vendordetail/vendordetail.component'; // Import FormsModule if using ngModel
 
 
 
@@ -24,7 +26,9 @@ import { StockComponent } from './stock/stock.component'; // Import FormsModule 
     DashboardComponent,
     VendorComponent,
     PurchaseComponent,
-    StockComponent
+    StockComponent,
+    CreatevendorComponent,
+    VendordetailComponent
     
   ],
   imports: [

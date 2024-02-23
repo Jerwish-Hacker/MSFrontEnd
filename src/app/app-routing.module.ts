@@ -6,6 +6,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { VendorComponent } from './vendor/vendor.component';
 import { PurchaseComponent } from './purchase/purchase.component';
 import { StockComponent } from './stock/stock.component';
+import { CreatevendorComponent } from './vendor/createvendor/createvendor.component';
+import { VendordetailComponent } from './vendor/vendordetail/vendordetail.component';
 
 const routes: Routes = [ 
   { path: '', component: LoginComponent },
@@ -17,7 +19,14 @@ const routes: Routes = [
       path:'dashboard', component: DashboardComponent
     },    
     {
-      path:'vendor', component: VendorComponent
+      path:'vendor', component: VendorComponent,children:[
+        {
+          path:'create', component: CreatevendorComponent
+        },
+        {
+          path:'', component: VendordetailComponent
+        }
+      ]
     },
     {
       path:'stock', component: StockComponent

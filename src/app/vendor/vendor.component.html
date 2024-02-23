@@ -1,19 +1,16 @@
 
 <div class="container" style="overflow-x: hidden;min-width: 95% !important;">
     <div class="row">
-        <div class="col-12 my-3 ">
+        <div class="col-12 my-3">
             <h3 class="fs-1">Vendor</h3>
 
         </div>
         <div class="col-12 my-3">
-            <select name="" id="" class="my-3 mx-3" >
-                <option value="" selected disabled hidden>Choose here</option>
-                <option value="">Rahul</option>
-                <option value="">Steve</option>
-                <option value="">Rajesh</option>
-                <option value="">Raju</option>    
-            </select>
-            <button class="btn btn-dark">Get Detail</button>
+            <button routerLink="create" class="btn btn-dark">Create New Vendor <i class="fas fa-plus px-2"></i></button>
+            
         </div>
+        <hr>
+        <router-outlet></router-outlet>        
+        
     </div>
 </div>
